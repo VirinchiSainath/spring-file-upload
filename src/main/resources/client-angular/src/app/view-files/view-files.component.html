@@ -1,0 +1,29 @@
+<!--<button class="btn" (click)="method();">Show in Console</button>-->
+
+<br><br>
+
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">File Name</th>
+        <th scope="col">File Author</th>
+        <th scope="col">File Type</th>
+        <th scope="col">Program To Run</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let obj of allFilesInJson">
+        <th>{{obj.id}}</th>
+        <td>{{obj.fileName}}</td>
+        <td>{{obj.fileAuthor}}</td>
+        <td>{{obj.fileType}}</td>
+        <td>{{obj.programToRun}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

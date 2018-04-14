@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Upload New File</h1>
+  <form #uploadFileForm="ngForm" (ngSubmit)="sendPostRequest(uploadFileForm); uploadFileForm.reset();">
+    <div class="form-group">
+      <label for="file-author">File Author</label>
+      <input name="fileAuthor" [(ngModel)]="fileAuthor"  type="text" class="form-control" id="file-author" required>
+    </div>
+
+    <div class="form-group">
+      <label for="file-type">File Type</label>
+      <input name="fileType" [(ngModel)]="fileType" type="text" class="form-control" id="file-type" required>
+    </div>
+
+    <div class="form-group">
+      <label for="program-to-run">Program To Run</label>
+      <input name="programToRun" [(ngModel)]="programToRun" type="text" class="form-control" id="program-to-run" required>
+    </div>
+
+    <div>
+      <input name="content" (change)="saveThisFile($event);" [(ngModel)]="content" type="file" required>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
